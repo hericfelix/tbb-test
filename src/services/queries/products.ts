@@ -3,7 +3,7 @@ export const productsQuery = `
     allProductsJson(
       skip: $page
       filter: { name: { regex: $name }, category: { name: { regex: $category } } }
-      limit: 2
+      limit: 10
     ) {
       edges {
         node {

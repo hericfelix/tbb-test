@@ -4,6 +4,7 @@ import { useGetAllProducts } from 'src/services/hooks';
 
 import { ProductsProviderProps } from './types';
 import { ProviderProps } from 'src/types';
+import { generateRegex } from 'src/utils';
 
 const ProductsProviderContext = createContext<ProductsProviderProps>({} as any);
 
@@ -13,8 +14,8 @@ export function ProductsProvider({ children }: ProviderProps) {
   const [productCategories, setProductCategories] = useState<string[]>([]);
 
   const [allProductsQuery] = useGetAllProducts({
-    name: productNameSearchValue,
-    category: productCategories,
+    name: generateRegex(productNameSearchValue),
+    category: generateRegex(productCategories),
     page
   });
 
