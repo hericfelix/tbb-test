@@ -12,13 +12,13 @@ const config: GatsbyConfig = {
   plugins: [
     'gatsby-plugin-styled-components',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `pages`,
+        name: 'products',
         path: `${__dirname}/src/mocks/`
       }
     },
-    `gatsby-transformer-json`
+    'gatsby-transformer-json'
   ]
 };
 
