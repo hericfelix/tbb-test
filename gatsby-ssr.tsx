@@ -1,5 +1,5 @@
 import React from 'react';
 
-import { UrqlProvider } from './src/contexts';
+import { Layout } from './src/components/core/layout';
 
-export const wrapRootElement = ({ element }) => <UrqlProvider>{element}</UrqlProvider>;
+export const wrapRootElement = ({ element }) => <Layout>{element}</Layout>;
