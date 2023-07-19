@@ -16,7 +16,8 @@
       "@contexts": ["src/shared/contexts/*"],
       "@utils/*": ["src/shared/utils/*"],
       "@types/*": ["src/shared/types/*"],
-      "@mocks/*": ["src/mocks/*"]
+      "@mocks/*": ["src/mocks/*"],
+      "@queries/*": ["src/queries/*"]
     }
   },
   "include": ["./src/**/*", "./gatsby-node.ts", "./gatsby-config.ts", "./plugins/**/*"]
