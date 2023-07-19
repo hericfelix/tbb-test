@@ -8,7 +8,7 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
@@ -23,7 +23,8 @@
     "gatsby-transformer-json": "^5.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^6.0.4"
+    "styled-components": "^6.0.4",
+    "urql": "^4.0.4"
   },
   "devDependencies": {
     "@types/node": "^20.3.3",
