@@ -65,7 +65,6 @@ export function HomeTemplate() {
             page={pageInfo?.currentPage}
             pageCount={pageInfo?.pageCount}
             handleChangePage={(number) => {
-              console.log('foi');
               setPage(number - 1);
             }}
           /> */}
