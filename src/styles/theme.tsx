@@ -3,19 +3,19 @@ import { DefaultTheme } from 'styled-components';
 export const lightTheme = {
   colors: {
     primary: {
-      default: '#cc2525',
-      light: '#f3bfbf',
-      dark: '#971b1b',
-      darker: '#831818'
+      default: '#56d3bb',
+      light: '#d0f3ec',
+      dark: '#2dae96',
+      darker: '#279781'
     },
     neutral: {
       white: '#ffffff',
-      neutral1: '#efebeb',
-      neutral2: '#d7cccd',
-      neutral3: '#b7a4a5',
-      neutral4: '#8f7071',
-      neutral5: '#6e5958',
-      neutral6: '#413434'
+      neutral1: '#ebefee',
+      neutral2: '#cdd6d3',
+      neutral3: '#a5b6b2',
+      neutral4: '#738c87',
+      neutral5: '#5a6d6a',
+      neutral6: '#35403e'
     }
   },
   breakpoints: {
