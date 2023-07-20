@@ -9,19 +9,22 @@ import {
   PageTitle,
   TitleContainer,
   HomeProductsContentContainer,
-  MainContainer
+  MainContainer,
+  ProductsListContent
 } from './styles';
 import { MobileFilter } from './components/filter/mobile-filter';
 import { Skeleton } from '@chakra-ui/react';
 import { useDeviceType } from 'src/hooks';
 import { DesktopFilter } from './components/filter/desktop-filter';
+import { Pagination } from '@components/pagination';
 
 export function HomeTemplate() {
-  const { allProductsQuery } = useProducts();
+  const { allProductsQuery, setPage } = useProducts();
 
   const deviceType = useDeviceType();
 
   const productsNodes = allProductsQuery.data?.allProductsJson.edges;
+  const pageInfo = allProductsQuery.data?.allProductsJson.pageInfo;
 
   function handleResultsText() {
     const productsCount = allProductsQuery.data?.allProductsJson.totalCount;
@@ -49,11 +52,24 @@ export function HomeTemplate() {
       <HomeProductsContentContainer>
         {deviceType === 'desktop' && <DesktopFilter />}
         <ProductsList>
-          {allProductsQuery.fetching &&
-            Array.from({ length: 8 }).map((_, index) => (
-              <Skeleton key={index} width="auto" height="26.25rem" />
-            ))}
-          {productsNodes?.map((node) => <ProductCard product={node.node} />)}
+          <ProductsListContent>
+            {allProductsQuery.fetching &&
+              Array.from({ length: 8 }).map((_, index) => (
+                <Skeleton key={index} width="auto" height="26.25rem" />
+              ))}
+            {productsNodes?.map((node) => <ProductCard product={node.node} />)}
+          </ProductsListContent>
+
+          <Pagination
+            hasNextPage={pageInfo?.hasNextPage}
+            hasPreviousPage={pageInfo?.hasPreviousPage}
+            page={pageInfo?.currentPage}
+            pageCount={pageInfo?.pageCount}
+            handleChangePage={(number) => {
+              console.log('foi');
+              setPage(number - 1);
+            }}
+          />
         </ProductsList>
       </HomeProductsContentContainer>
     </MainContainer>

@@ -8,7 +8,14 @@ export const MainContainer = styled.main`
   }
 `;
 
-export const ProductsList = styled.ul`
+export const ProductsList = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+`;
+
+export const ProductsListContent = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.25rem;
