@@ -6,7 +6,7 @@ export interface PageInfo {
 }
 
 export interface EdgeInfo<T> {
-  nodes: T[];
+  node: T;
 }
 
 export interface AllQueryResponse<T> {
