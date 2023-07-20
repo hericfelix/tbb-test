@@ -4,7 +4,7 @@ export const ProductCardContainer = styled.li`
   display: flex;
   gap: 0.5rem;
 
-  padding: 1rem;
+  padding: 0.5rem;
 
   background-color: ${({ theme }) => theme.colors.neutral.white};
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -15,6 +15,8 @@ export const ProductCardContainer = styled.li`
     flex-direction: column;
     align-items: center;
     max-width: 25rem;
+
+    grid-column: auto/span 4;
   }
 `;
 
@@ -51,16 +53,18 @@ export const ProductInfoContainer = styled.div`
   h2 {
     font-size: ${({ theme }) => theme.fontSizes.sm};
     font-weight: 600;
+    color: ${({ theme }) => theme.colors.neutral.neutral6};
   }
 
   h3 {
     font-size: ${({ theme }) => theme.fontSizes.xs};
     font-weight: 600;
-    color: ${({ theme }) => theme.colors.primary.default};
+    color: ${({ theme }) => theme.colors.primary.dark};
   }
 
   p {
     font-size: ${({ theme }) => theme.fontSizes.xs};
+    color: ${({ theme }) => theme.colors.neutral.neutral5};
     font-weight: 400;
   }
 `;

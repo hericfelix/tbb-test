@@ -1,5 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import { ChakraProvider } from '@chakra-ui/react';
+
 import { ProductsProvider, UrqlProvider } from 'src/contexts';
 
 import { Header } from '../header';
@@ -15,9 +17,11 @@ export function Layout({ children }: ProviderProps) {
     <UrqlProvider>
       <ProductsProvider>
         <ThemeProvider theme={lightTheme}>
-          <Header />
+          <ChakraProvider>
+            <Header />
 
-          {children}
+            {children}
+          </ChakraProvider>
         </ThemeProvider>
       </ProductsProvider>
     </UrqlProvider>

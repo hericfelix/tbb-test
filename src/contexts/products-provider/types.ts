@@ -12,6 +12,6 @@ export interface ProductsProviderProps {
   setProductNameSearchValue: Dispatch<SetStateAction<string>>;
   page: number;
   setPage: Dispatch<SetStateAction<number>>;
-  productCategories: string[];
-  setProductCategories: Dispatch<SetStateAction<string[]>>;
+  selectedProductCategories: string[];
+  setSelectedProductCategories: Dispatch<SetStateAction<string[]>>;
 }

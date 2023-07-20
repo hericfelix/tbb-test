@@ -4,6 +4,15 @@ export interface ProductImage {
   };
 }
 
+export type ProductCategoryName =
+  | 'Roll On'
+  | 'Alcohol en Gel'
+  | 'Aerosol'
+  | 'Jabón Líquido'
+  | 'Jabón Barra'
+  | 'Crema Soft Solid'
+  | 'Talco';
+
 export interface Product {
   id: string;
   jsonId: string;
@@ -12,6 +21,6 @@ export interface Product {
   images: ProductImage[];
   category: {
     _id: string;
-    name: string;
+    name: ProductCategoryName;
   };
 }

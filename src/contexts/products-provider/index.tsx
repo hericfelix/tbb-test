@@ -13,13 +13,13 @@ const ProductsProviderContext = createContext<ProductsProviderProps>({} as any);
 export function ProductsProvider({ children }: ProviderProps) {
   const [productNameSearchValue, setProductNameSearchValue] = useState('');
   const [page, setPage] = useState(0);
-  const [productCategories, setProductCategories] = useState<string[]>([]);
+  const [selectedProductCategories, setSelectedProductCategories] = useState<string[]>([]);
 
   const debouncedProductNameSearchValue = useDebounce(productNameSearchValue, 200);
 
   const [allProductsQuery] = useGetAllProducts({
     name: generateRegex(debouncedProductNameSearchValue),
-    category: generateRegex(productCategories),
+    category: generateRegex(selectedProductCategories),
     page
   });
 
@@ -28,10 +28,10 @@ export function ProductsProvider({ children }: ProviderProps) {
       value={{
         allProductsQuery,
         page,
-        productCategories,
+        selectedProductCategories,
         productNameSearchValue,
         setPage,
-        setProductCategories,
+        setSelectedProductCategories,
         setProductNameSearchValue
       }}
     >
