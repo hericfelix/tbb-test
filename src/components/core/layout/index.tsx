@@ -1,12 +1,25 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import { ProductsProvider, UrqlProvider } from 'src/contexts';
 
+import { Header } from '../header';
+
 import { ProviderProps } from 'src/types';
+
+import { lightTheme } from 'src/styles/theme';
+
+import '../../../styles/global.css';
 
 export function Layout({ children }: ProviderProps) {
   return (
     <UrqlProvider>
-      <ProductsProvider>{children}</ProductsProvider>
+      <ProductsProvider>
+        <ThemeProvider theme={lightTheme}>
+          <Header />
+
+          {children}
+        </ThemeProvider>
+      </ProductsProvider>
     </UrqlProvider>
   );
 }
