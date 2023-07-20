@@ -7,13 +7,14 @@ export const ProductCardContainer = styled.li`
   padding: 1rem;
 
   background-color: ${({ theme }) => theme.colors.neutral.white};
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-  width: 100%;
+  width: auto;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.md}) {
     flex-direction: column;
     align-items: center;
-    width: 17rem;
+    max-width: 25rem;
   }
 `;
 

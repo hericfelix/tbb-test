@@ -4,6 +4,8 @@ import { ProductCard } from '@components/product-card';
 
 import { useProducts } from 'src/contexts';
 
+import { ProductsList } from './styles';
+
 export function HomeTemplate() {
   const { allProductsQuery } = useProducts();
 
@@ -14,7 +16,9 @@ export function HomeTemplate() {
   return (
     <div>
       Olá!
-      <ul>{productsNodes?.map((node) => <ProductCard product={node.node} />)}</ul>
+      <ProductsList>
+        {productsNodes?.map((node) => <ProductCard product={node.node} />)}
+      </ProductsList>
     </div>
   );
 }
