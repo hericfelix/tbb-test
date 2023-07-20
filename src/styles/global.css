@@ -15,4 +15,5 @@ body {
   font-size: 16px;
   scroll-behavior: smooth;
   background-color: #f8faf9;
+  height: 100vh;
 }

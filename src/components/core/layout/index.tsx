@@ -2,7 +2,8 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { ChakraProvider } from '@chakra-ui/react';
 
-import { ProductsProvider, UrqlProvider } from 'src/contexts';
+import { ProductsProvider } from '@contexts/products-provider';
+import { UrqlProvider } from '@contexts/urql-provider';
 
 import { Header } from '../header';
 
