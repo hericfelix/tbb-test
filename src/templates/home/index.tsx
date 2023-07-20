@@ -1,8 +1,12 @@
 import React from 'react';
+import { Skeleton } from '@chakra-ui/react';
 
 import { ProductCard } from '@components/product-card';
+import { MobileFilter } from './components/filter/mobile-filter';
+import { DesktopFilter } from './components/filter/desktop-filter';
 
 import { useProducts } from 'src/contexts';
+import { useDeviceType } from 'src/hooks';
 
 import {
   ProductsList,
@@ -12,19 +16,13 @@ import {
   MainContainer,
   ProductsListContent
 } from './styles';
-import { MobileFilter } from './components/filter/mobile-filter';
-import { Skeleton } from '@chakra-ui/react';
-import { useDeviceType } from 'src/hooks';
-import { DesktopFilter } from './components/filter/desktop-filter';
-import { Pagination } from '@components/pagination';
 
 export function HomeTemplate() {
-  const { allProductsQuery, setPage } = useProducts();
+  const { allProductsQuery } = useProducts();
 
   const deviceType = useDeviceType();
 
   const productsNodes = allProductsQuery.data?.allProductsJson.edges;
-  const pageInfo = allProductsQuery.data?.allProductsJson.pageInfo;
 
   function handleResultsText() {
     const productsCount = allProductsQuery.data?.allProductsJson.totalCount;
@@ -60,7 +58,8 @@ export function HomeTemplate() {
             {productsNodes?.map((node) => <ProductCard product={node.node} />)}
           </ProductsListContent>
 
-          <Pagination
+          {/* INFO: Planned on adding pagination, but had to remove due to a pretty suspicious bug when passing skip 2 to graphql */}
+          {/* <Pagination
             hasNextPage={pageInfo?.hasNextPage}
             hasPreviousPage={pageInfo?.hasPreviousPage}
             page={pageInfo?.currentPage}
@@ -69,7 +68,7 @@ export function HomeTemplate() {
               console.log('foi');
               setPage(number - 1);
             }}
-          />
+          /> */}
         </ProductsList>
       </HomeProductsContentContainer>
     </MainContainer>

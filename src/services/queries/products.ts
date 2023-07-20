@@ -1,9 +1,7 @@
 export const productsQuery = `
-  query ProductsQuery($page: Int = 0, $name: String = "", $category: String = "") {
+  query ProductsQuery( $name: String = "", $category: String = "") {
     allProductsJson(
-      skip: $page
       filter: { name: { regex: $name }, category: { name: { regex: $category } } }
-      limit: 10
     ) {
       edges {
         node {

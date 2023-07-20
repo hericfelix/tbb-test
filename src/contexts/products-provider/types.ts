@@ -10,8 +10,6 @@ export interface ProductsProviderProps {
   allProductsQuery: UseQueryState<AllProductsJsonData, QueryAllProductsVariables>;
   productNameSearchValue: string;
   setProductNameSearchValue: Dispatch<SetStateAction<string>>;
-  page: number;
-  setPage: Dispatch<SetStateAction<number>>;
   selectedProductCategories: string[];
   setSelectedProductCategories: Dispatch<SetStateAction<string[]>>;
 }
