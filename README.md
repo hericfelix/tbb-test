@@ -4,46 +4,58 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby Minimal TypeScript Starter
+  TBB React Test
 </h1>
 
-## 🚀 Quick start
+# Project
 
-1.  **Create a Gatsby site.**
+This project is a simple products layout built using Typescript, React and Gatsby. The main objective of this project was to create a fully responsive website that allows filtering products by name or categories.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+## Technologies Used
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+- [Typescript](https://www.typescriptlang.org/): A typed superset of JavaScript that enhances the development experience.
+- [React](https://reactjs.org/): A JavaScript library for building user interfaces.
+- [Styled-components](https://styled-components.com/): A CSS-in-JS library for styling React components.
+- [ChakraUI](https://chakra-ui.com/): A simple and modular component library for React.
+- [Gatsby](https://www.gatsbyjs.com/): A static site generator for React that offers fast performance and great developer experience.
+- [Urql](https://formidable.com/open-source/urql/): A lightweight GraphQL client that integrates seamlessly with React.
 
-2.  **Start developing.**
+## Project Features
 
-    Navigate into your new site’s directory and start it up.
+- Simple and intuitive products layout.
+- Fully responsive design for all devices.
+- Filter products by name or categories.
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## Getting Started
 
-3.  **Open the code and start customizing!**
+To get started with the project, follow these steps:
 
-    Your site is now running at http://localhost:8000!
+1. Clone the repository:
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+```bash
+git clone <repository-url>
+```
 
-4.  **Learn more**
+2. Navigate to the project directory:
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+```bash
+cd <project-folder>
+```
 
-## 🚀 Quick start (Netlify)
+3. Install dependencies using Yarn:
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+```bash
+yarn
+```
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+4. Run the development server:
+
+```bash
+yarn dev
+```
+
+The development server will be up and running at http://localhost:8000.
+
+## License
+
+This project is licensed under the MIT License.
