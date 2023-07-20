@@ -12,12 +12,14 @@
     "skipLibCheck": true,
     "paths": {
       "@components/*": ["src/components/*"],
-      "@hooks/*": ["src/shared/hooks/*"],
-      "@contexts": ["src/shared/contexts/*"],
-      "@utils/*": ["src/shared/utils/*"],
-      "@types/*": ["src/shared/types/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@contexts/*": ["src/contexts/*"],
+      "@utils/*": ["src/utils/*"],
+      "@types/*": ["src/types/*"],
       "@mocks/*": ["src/mocks/*"],
-      "@queries/*": ["src/queries/*"]
+      "@services/*": ["src/services/*"],
+      "@images/*": ["src/images/*"],
+      "@styles/*": ["src/styles/*"]
     }
   },
   "include": ["./src/**/*", "./gatsby-node.ts", "./gatsby-config.ts", "./plugins/**/*"]
