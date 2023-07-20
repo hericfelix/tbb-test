@@ -24,5 +24,11 @@ export const lightTheme = {
     lg: '1024px',
     xl: '1280px',
     xxl: '1600px'
+  },
+  fontSizes: {
+    xs: '0.75rem',
+    sm: '1rem',
+    md: '1.25rem',
+    lg: '2.5rem'
   }
 };
